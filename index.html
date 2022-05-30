@@ -12,12 +12,14 @@
 	<div class="home" id="home">
 		<nav>
 			<h2 class="logo"><img src="img/Logo.png"></img></h2>
-			<ul>
+			<ul id="menuList">
 				<li><a href="#home">HOME</a></li>
 				<li><a href="#about">ABOUT US</a></li>
 				<li><a href="#product">PRODUCTS</a></li>
 				<li><a href="#Gallery">GALLERY</a></li>
 				<li><a href="#contact">CONTACT US</a></li>
+			</ul>
+			<li><img src="img/menu.png"class="menu" onclick="togglemenu()"></img></li>
 		</nav>
 		<div class="content">
 			<h4>Quality</h4>
@@ -42,6 +44,7 @@
 			</div>
 		</div>
 	</section>
+
 	<!----Product section start---->
 	<section class="product" id="product">
 		<div class="title">
@@ -68,6 +71,7 @@
 			<img src="img/Background.jpeg">
 		</div>
 	</section>
+	
 	<!-----Gallery section start----------->
 	<div class="service" id="Gallery">
 		<div class="title">
@@ -133,5 +137,20 @@
 			<a href="#"><i class="fab fa-dribbble"></i></a>
 		</div>
 	</footer>
+	<script>
+		var menuList=document.getElementById("menuList");
+		menuList.style.maxHeight= "0px" ;
+
+		function togglemenu(){
+			if(menuList.style.maxHeight=="0px")
+			{
+				menuList.style.maxHeight="600px";
+			}
+			else
+			{
+				menuList.style.maxHeight="0px";
+			}
+		}
+	</script>
 </body>
 </html>

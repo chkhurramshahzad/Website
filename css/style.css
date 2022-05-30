@@ -19,6 +19,11 @@ nav{
 	padding-left: 8%;
 	padding-right: 8%;
 }
+.menu{
+	width: 40px;
+	cursor: pointer;
+	display: none;
+}
 .logo{
 	width: 250px;
 	font-size: 40px;
@@ -30,7 +35,7 @@ span{
 nav ul li{
 	list-style-type: none;
 	display: inline-block;
-	padding: 10px  25px;
+	padding: 25px  25px;
 }
 nav ul li a{
 	color: white;
@@ -38,6 +43,73 @@ nav ul li a{
 	font-weight: bold;
 	text-transform: capitalize;
 }
+@media only screen and (max-width: 700px) {
+	nav ul{
+		width: 100%;
+		position:absolute;
+		background: linear-gradient(rgba(0, 0, 0, 0.984),rgba(0, 0, 0, 0.984));
+		top: 110px;
+		right: 0;
+		z-index: 2;
+	}
+	nav ul li{
+		display: block;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	nav ul li a{
+		color: white;
+	}
+	.menu{
+		display: block;
+	}
+	#menuList{
+		overflow: hidden;
+		transition: 0.5s;
+	}
+	.about{
+		flex-direction: column-reverse;
+	}
+	.about img{
+		flex-direction: column-reverse;
+	}
+	.about-text{
+		flex-direction: column-reverse;
+	}
+	.about-text h2{
+		flex-direction: column-reverse;
+		padding-left: 45px;
+	}
+	.about-text h5{
+		flex-direction: column-reverse;
+		padding-left: 50px;
+	}
+	.about-text p{
+		flex-direction: column-reverse;
+		text-align:center;
+	}
+	button{
+		flex-direction: column-reverse;
+		margin-bottom: 20px;
+		padding-left: 1000px;
+	}
+	.main{
+		width: 650px;
+		max-width: 40%;
+		flex-direction: column-reverse;
+	}
+	.title h2{
+		flex-direction: column-reverse;
+		padding-right: 850px;
+	}
+	.box{
+		flex-direction: column-reverse;
+	}
+	.card{
+		flex-direction: column-reverse;
+	}
+  }
+
 nav ul li a:hover{
 	color: #f9004d;
 	transition: .4s;
