@@ -18,11 +18,7 @@ nav{
 	padding-top: 5px;
 	padding-left: 8%;
 	padding-right: 8%;
-}
-.menu{
-	width: 40px;
-	cursor: pointer;
-	display: none;
+	background-color:rgba(0, 0, 0, 0.31) ;
 }
 .logo{
 	width: 250px;
@@ -35,7 +31,8 @@ span{
 nav ul li{
 	list-style-type: none;
 	display: inline-block;
-	padding: 25px  25px;
+	padding: 6px  30px;
+
 }
 nav ul li a{
 	color: white;
@@ -43,19 +40,41 @@ nav ul li a{
 	font-weight: bold;
 	text-transform: capitalize;
 }
-@media only screen and (max-width: 700px) {
+#icon{
+	background-color: #f9004d;
+	border-radius: 5px;
+	padding: 5px 7px 3px 7px;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+#icon svg{
+	color: white;
+	height: 28px;
+	transition: all .3s ease;
+}
+#icon:hover{
+	background-color: rgba(0, 0, 0, 0.147);
+}
+#checkbox,#icon{
+	display: none;
+}
+@media only screen and (max-width: 785px) {
 	nav ul{
 		width: 100%;
+		height: 400px;
 		position:absolute;
 		background: linear-gradient(rgba(0, 0, 0, 0.984),rgba(0, 0, 0, 0.984));
 		top: 110px;
 		right: 0;
 		z-index: 2;
+		display: none;
 	}
 	nav ul li{
 		display: block;
 		margin-top: 20px;
 		margin-bottom: 10px;
+		padding:18px 18px;
+		text-align: center;
 	}
 	nav ul li a{
 		color: white;
@@ -63,9 +82,11 @@ nav ul li a{
 	.menu{
 		display: block;
 	}
-	#menuList{
-		overflow: hidden;
-		transition: 0.5s;
+	#icon{
+		display: block;
+	}
+	#checkbox:checked~ul{
+		display: block;
 	}
 	.about{
 		flex-direction: column-reverse;
@@ -75,6 +96,7 @@ nav ul li a{
 	}
 	.about-text{
 		flex-direction: column-reverse;
+		text-align: center;
 	}
 	.about-text h2{
 		flex-direction: column-reverse;
@@ -100,12 +122,18 @@ nav ul li a{
 	}
 	.title h2{
 		flex-direction: column-reverse;
-		padding-right: 850px;
+		padding-right: 650px;
 	}
 	.box{
 		flex-direction: column-reverse;
 	}
 	.card{
+		flex-direction: column-reverse;
+	}
+	.footer-col{
+		flex-direction: column-reverse;
+	}
+	.social{
 		flex-direction: column-reverse;
 	}
   }
@@ -123,6 +151,10 @@ nav ul li a:hover{
 	padding: 10px 25px;
 	border-radius: 30px;
 	transition: transform .4s; 
+}
+.img1{
+	width: 100px;
+	height: 100px;
 }
 .btn:hover{
 	transform: scale(1.2);
@@ -348,72 +380,75 @@ button:hover{
 	border: 2px solid #f9004d;
 	cursor: pointer;
 }
-footer{
-	position: relative;
-	width: 100%;
-	height: 490px;
-	background: #000;
+.container1{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
 	display: flex;
-	flex-direction: column;
-	align-items: right;
-	justify-content: right;
+	flex-wrap: wrap;
 }
-.contact{
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #000000;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
 	text-align: center;
-	font-size: 50px;
-	padding-top: 10px;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
 }
-.contact1{
-	text-align: center;
-	color: white;
-	font-size: 20px;
-	padding-top: 15px;
-
-}
-.contact1 h4{
-	text-align: center;
-	color: #f9004d;
-	font-size: 30px;
-	font-weight: bold;
-
-}
-.contact2{
-	text-align: center;
-	color: white;
-	font-size: 20px;
-	padding-top: 20px;
-}
-.contact2 h4{
-	text-align: center;
-	color: #f9004d;
-	font-size: 30px;
-	font-weight: bold;
-}
-.contact3{
-	padding-right: 10px;
-	text-align: center;
-	color: white;
-	font-size: 20px;
-	padding-top: 25px;
-}
-.contact3 h4{
-	text-align: center;
-	color: #f9004d;
-	font-size: 30px;
-	font-weight: bold;
-}
-footer p:nth-child(1){
-	font-size: 30px;
-	color: white;
-	margin-bottom: 20px;
-	font-weight: bold;
-}
-footer p:nth-child(2){
-	color: white;
-	font-size: 17px;
-	width: 500px;
-	text-align: center;
-	line-height: 26px;
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
 }
 .social{
 	display: flex;
